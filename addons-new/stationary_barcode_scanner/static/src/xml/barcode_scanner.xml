@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-name="stationary_barcode_scanner.BarcodeScanner" owl="1">
+        <div class="o_field_widget o_field_char o_stationary_scanner_widget w-100">
+            <input t-ref="barcodeInput"
+                   type="text"
+                   class="o_input form-control stationary-scanner-input"
+                   placeholder="Scan stationary barcode here..."
+                   autocomplete="off"
+                   t-on-keydown.stop="onKeydown"/>
+        </div>
+    </t>
+</templates>

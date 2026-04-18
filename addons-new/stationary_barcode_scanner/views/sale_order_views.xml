@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_order_form_inherit_stationary_scanner" model="ir.ui.view">
+        <field name="name">sale.order.form.inherit.stationary.scanner</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//sheet" position="before">
+                <div class="oe_button_box" name="button_box">
+                    <!-- Placeholder if we need button box integration later -->
+                </div>
+                <div invisible="state not in ['draft', 'sent']" class="alert alert-info d-flex align-items-center oe_edit_only" role="alert" style="margin-bottom: 10px; padding: 10px;">
+                    <i class="fa fa-barcode fa-2x mr-3" style="margin-right: 15px;"/>
+                    <div style="flex-grow: 1;">
+                        <strong>Stationary Scanner:</strong>
+                        <field name="stationary_barcode" widget="stationary_barcode_scanner"/>
+                    </div>
+                </div>
+            </xpath>
+        </field>
+    </record>
+</odoo>
